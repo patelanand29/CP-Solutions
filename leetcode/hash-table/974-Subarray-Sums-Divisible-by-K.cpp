@@ -6,7 +6,6 @@ public:
         unordered_map<int,int>mp;
         mp[0]=1;
         for(int i=0;i<nums.size();i++){
-            nums[i]%=k;
 
             if(i>0)nums[i]+=nums[i-1];
              nums[i]%=k;
