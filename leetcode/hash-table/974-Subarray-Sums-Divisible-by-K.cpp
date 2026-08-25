@@ -8,15 +8,12 @@ public:
         for(int i=0;i<nums.size();i++){
 
             if(i>0)nums[i]+=nums[i-1];
-             nums[i]%=k;
             
-            if(nums[i]%k>=0){
-                ans+=mp[nums[i]%k];
-                mp[nums[i]]++;}
-            else{
-                ans+=mp[(nums[i]%k+k)%k];
-                mp[nums[i]%k+k]++;
-            } 
+            nums[i]%=k;
+            
+            ans+=mp[(nums[i]%k+k)%k];
+            mp[(nums[i]%k+k)%k]++;
+            
         }
         
         return ans;
