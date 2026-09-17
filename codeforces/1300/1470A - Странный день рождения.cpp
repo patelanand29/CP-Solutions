@@ -18,7 +18,7 @@ while(t--){
      sort(v.rbegin(),v.rend());
      int idx=0;
      for(int i=0;i<n;i++){
-        if(b[v[i]-1]>b[idx] && idx<v[i] && idx<m){
+        if(b[v[i]-1]>b[idx] && idx<m){
             cost+=b[idx];
             idx++;
         }
