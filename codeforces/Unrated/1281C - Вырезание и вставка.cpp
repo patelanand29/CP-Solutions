@@ -15,7 +15,7 @@ while(t--){
      cin>>s;
      ll ans=s.size();
      for(int i=1;i<=x;i++){
-        ans+=(((s[i-1]-'0'-1+MOD)%MOD)*(((ans-i)%MOD)+MOD)%MOD)%MOD;
+        ans+=(((s[i-1]-'0'-1+MOD)%MOD)*((ans-i+MOD)%MOD))%MOD;
         ans%=MOD;
         if(s.size()<x){
            string str=s.substr(i);
