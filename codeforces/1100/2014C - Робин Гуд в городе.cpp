@@ -8,6 +8,9 @@ cout.tie(nullptr);
 int t;
 cin>>t;
 while(t--){
+
+    //Binary search method kra hai is baar last time with greedy done
+
      ll n;
      cin>>n;
      vector<ll>v(n);
@@ -24,7 +27,17 @@ while(t--){
         cout<<0<<endl;
      }
      else{
-        cout<<v[n/2]*n*2-sum+1<<endl;
+        ll low=0,high=1e18;
+        ll x=INT_MAX;
+        while(low<=high){
+            ll mid=(low+high)/2;
+            if(mid+sum>=v[n/2]*2*n){
+                x=mid;
+                high=mid-1;
+            }
+            else low=mid+1;
+        }
+        cout<<x+1<<endl;
      }
         
 }
