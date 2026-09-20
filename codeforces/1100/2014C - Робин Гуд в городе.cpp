@@ -31,13 +31,13 @@ while(t--){
         ll x=INT_MAX;
         while(low<=high){
             ll mid=(low+high)/2;
-            if(mid+sum>=v[n/2]*2*n){
+            if(mid+sum>v[n/2]*2*n){
                 x=mid;
                 high=mid-1;
             }
             else low=mid+1;
         }
-        cout<<x+1<<endl;
+        cout<<x<<endl;
      }
         
 }
